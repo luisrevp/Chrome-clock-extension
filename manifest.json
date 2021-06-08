@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Reloj dinámico - Luis Revilla",
+  "description": "Extensión para chrome de un reloj digital, con 2 modos de vista",
+  "version": "1.0.0",
+  "icons": { "128": "LR-Logo.png" },
+  "content_scripts": [
+    {
+      "matches": ["file:///foo/reloj.html"],
+      "js": ["reloj.js"],
+      "css": ["reloj.css"]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "reloj.html"
+  },
+  "permissions": ["activeTab"]
+}
