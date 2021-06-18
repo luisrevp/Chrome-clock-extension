@@ -9,6 +9,7 @@ body {
   align-items: center;
   font-family: "Space Mono", monospace;
   text-align: center;
+  background: #fff;
 }
 
 .day,
