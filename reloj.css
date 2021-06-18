@@ -47,13 +47,19 @@ body .night {
   opacity: 1;
 }
 
-.date-wrap h1:first-child {
-  font-size: 60px;
-  margin: 0;
+.dia,
+.hora,
+.fecha {
+  margin: 10px 0px;
 }
 
-.date-wrap h1:last-child {
-  margin: 0;
+.dia {
+  font-size: 50px;
+}
+.hora {
+  font-size: 60px;
+}
+.fecha {
   font-family: "Poppins", sans-serif;
 }
 

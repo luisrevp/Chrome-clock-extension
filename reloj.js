@@ -21,6 +21,7 @@ function reloj() {
   let mainPage = document.getElementById("reloj-main");
   let newDate, newHours, horas, minutos, segundos, dias, meses;
   let date = new Date();
+  let dia = date.getDay();
   horas = date.getHours();
   minutos = date.getMinutes();
   segundos = date.getSeconds();
@@ -35,13 +36,24 @@ function reloj() {
   else if (horas >= 13 && horas < 19) document.title = "¡Buenas tardes!";
   else if (horas >= 19 && horas < 6) document.title = "¡Buenas noches!";
 
+  switch (dia) {
+    case 0: dia = "Domingo"; break;
+    case 1: dia = "Lunes"; break;
+    case 2: dia = "Martes"; break;
+    case 3: dia = "Miércoles"; break;
+    case 4: dia = "Jueves"; break;
+    case 5: dia = "Viernes"; break;
+    case 6: dia = "Sábado"; break;
+  }
+
   return setTimeout(() => {
     newDate = `${datos[3]}/${datos[4]}/${date.getFullYear()}`;
     newHours = `${datos[0]}:${datos[1]}:${datos[2]}`;
     mainPage.innerHTML = `
     <div class="date-wrap">
-    <h1 class="date">${newHours}</h1>
-    <h1 class="date">${newDate}</h1>
+    <h1 class="dia">${dia}</h1>
+    <h1 class="hora">${newHours}</h1>
+    <h1 class="fecha">${newDate}</h1>
     </div>
     `;
     reloj();
