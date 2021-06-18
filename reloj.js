@@ -31,6 +31,10 @@ function reloj() {
     return (el < 10 ? "0" : "") + el;
   });
 
+  if (horas >= 6 && horas < 13) document.title = "¡Buenos días!";
+  else if (horas >= 13 && horas < 19) document.title = "¡Buenas tardes!";
+  else if (horas >= 19 && horas < 6) document.title = "¡Buenas noches!";
+
   return setTimeout(() => {
     newDate = `${datos[3]}/${datos[4]}/${date.getFullYear()}`;
     newHours = `${datos[0]}:${datos[1]}:${datos[2]}`;
