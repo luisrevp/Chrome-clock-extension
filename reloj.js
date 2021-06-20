@@ -32,9 +32,10 @@ function reloj() {
     return (el < 10 ? "0" : "") + el;
   });
 
-  if (horas >= 6 && horas < 13) document.title = "¡Buenos días!";
+  if (horas >= 0 && horas < 6) document.title = "¡Buenas noches!";
+  else if (horas >= 6 && horas < 13) document.title = "¡Buenos días!";
   else if (horas >= 13 && horas < 19) document.title = "¡Buenas tardes!";
-  else if (horas >= 19 && horas > 0) document.title = "¡Buenas noches!";
+  else if (horas >= 19) document.title = "¡Buenas noches!";
 
   switch (dia) {
     case 0: dia = "Domingo"; break;
